@@ -171,6 +171,33 @@ header {
 .nav-collapse ul ul a {
     padding-left: 2em;
 }
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.text-content .est {
+    font-family: "Courier New", Courier, monospace;
+}
+
+
+.logo-image img {
+    width: 400px;
+}
 
 @media screen and (min-width: 768px) {
     #header {
