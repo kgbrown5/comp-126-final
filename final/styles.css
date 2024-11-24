@@ -197,11 +197,53 @@ header {
 .logo-image img {
     width: 400px;
 }
+/* about.html css below */
+h3{
+    font-weight: 300;
+    font-size: 21px;;
+    color: black;
+    text-align: center;
+    line-height: 30px;
+    margin: 0% 10%;
+}
+
+.container{
+    margin: 2em 2em 4rem;
+}
+.exec-list{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+}
+.person{
+    border-radius: 50%;
+    width: 30%;
+    height: auto;
+}
+h5{
+    font-weight: 300;
+    color: grey;
+}
+.member-card{
+    text-align: center;
+    line-height: 0%;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 20px 5px #ebebeb;
+}
+
+/* join.html css below */
 
 main > p{
     text-align: center;
 }
-
+h3{
+    color:#3E64A5;
+    font-weight: 400;
+}
 form {
     max-width: 500px;
     margin: 10px auto;
@@ -231,7 +273,6 @@ h1 {
     color: #8a97a0;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
     margin-bottom: 30px;
-    caret-size: 5px;
     transition: all 350ms;
 }
 input::placeholder,
@@ -300,5 +341,10 @@ textarea:focus {
     }
     .nav-toggle {
         display: none;
+    }
+    .exec-list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
     }
 }
