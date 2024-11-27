@@ -236,6 +236,74 @@ h5{
     box-shadow: 1px 1px 20px 5px #ebebeb;
 }
 
+.executive-board {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+.executive-board h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.executive-board h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #66b3ff;
+    margin: 10px auto 20px;
+}
+
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profile-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+.profile-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid #66b3ff;
+}
+
+.profile-card h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profile-card .name {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profile-card .details {
+    font-size: 0.9rem;
+    color: #555;
+}
+
 /* join.html css below */
 
 main > p{
