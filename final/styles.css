@@ -26,20 +26,20 @@ h3, p, a {
 }
 
 #header {
-    background-color: #3CDFFF;
+    background-color: #D7F2FB;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 55px 1fr;
 }
 
 .nav-collapse {
-    background-color: #3CDFFF;
+    background-color: #D7F2FB;
     grid-column: 3 / 4;
     grid-row: 2 / 3;
 }
 
 .menu-item a:hover, .menu-item a:focus {
-    color: white;
+    color:#69C1ED;
     border-radius: 2rem;
     margin: auto;
 }
@@ -52,7 +52,7 @@ h3, p, a {
 
 footer {
     padding: 15px;
-    background-color: #3CDFFF;
+    background-color:#D7F2FB;
 }
 
 /* \/ \/ responsive nav styling */
@@ -196,6 +196,51 @@ header {
 
 .logo-image img {
     width: 400px;
+}
+.our-mission {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+.our-mission h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #66b3ff;
+    margin: 10px auto 20px;
+}
+
+.our-mission .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.our-mission h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #3E64A5;
+}
+
+.our-mission p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.our-mission p:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .our-mission h2 {
+        font-size: 2.5em;
+    }
+
+    .our-mission p {
+        font-size: 1.1em;
+    }
 }
  HEAD
 /* about.html css below */
