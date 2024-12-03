@@ -359,6 +359,14 @@ h3{
     font-weight: 400;
     text-align: center;
 }
+h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #66b3ff;
+    margin: 10px auto 20px;
+}
 form {
     max-width: 500px;
     margin: 10px auto;
