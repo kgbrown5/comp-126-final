@@ -25,6 +25,11 @@ h3, p, a {
     color: #3E64A5;
 }
 
+dl, dt, dd{
+    font-family: "Josefin Sans", sans-serif;
+    color: black;
+}
+
 #header {
     background-color: #D7F2FB;
     display: grid;
@@ -462,37 +467,4 @@ textarea:focus {
 
 .event-list{
     text-align: center;
-}
-
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-h3 {
-    color: #4a90e2;
-    border-bottom: 2px solid #4a90e2;
-    padding-bottom: 5px;
-}
-
-.event {
-    margin-bottom: 20px;
-    padding: 10px;
-    border-left: 4px solid #4a90e2;
-    background: #f9f9f9;
-}
-
-.event h4 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #333;
-}
-
-.event p {
-    margin: 5px 0;
-    font-size: 1rem;
 }
