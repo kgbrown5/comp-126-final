@@ -25,6 +25,11 @@ h3, p, a {
     color: #3E64A5;
 }
 
+dl, dt, dd{
+    font-family: "Josefin Sans", sans-serif;
+    color: black;
+}
+
 #header {
     background-color: #D7F2FB;
     display: grid;
