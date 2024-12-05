@@ -471,3 +471,9 @@ textarea:focus {
         grid-template-rows: auto;
     }
 }
+
+/*event css below*/
+
+.event-list{
+    text-align: center;
+}
