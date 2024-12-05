@@ -88,20 +88,6 @@ a:active, a:hover {
     justify-self: end;
 }
 
-.nav-toggle:before {
-    color: #3E64A5; /* edit this to change the icon color */
-    font: normal 28px/55px "responsivenav"; /* edit font-size (28px) to change the icon size */
-    text-transform: none;
-    text-align: center;
-    position: absolute;
-    content: "\2261"; /* hamburger icon */
-    font-family: "Josefin Sans", sans-serif;
-    color: #3E64A5;
-    text-indent: 0;
-    width: 100%;
-    left: 0;
-    top: 0;
-}
 
 .nav-toggle.active:before {
     font-size: 24px;
@@ -476,4 +462,37 @@ textarea:focus {
 
 .event-list{
     text-align: center;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    color: #4a90e2;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 5px;
+}
+
+.event {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 4px solid #4a90e2;
+    background: #f9f9f9;
+}
+
+.event h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.event p {
+    margin: 5px 0;
+    font-size: 1rem;
 }
