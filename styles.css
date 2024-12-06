@@ -6,12 +6,14 @@
 
 .josefin-sans-regular {
     font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
 
-html {
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
     width: 100%;
 }
 
@@ -24,28 +26,18 @@ h3, p, a {
     font-family: "Josefin Sans", sans-serif;
     color: #3E64A5;
     text-align: center;
+    transition: all 350ms
 }
 
-dl, dt, dd{
-    font-family: "Josefin Sans", sans-serif;
-    color: black;
-}
+/* ^^^ global styling */
 
-#header {
+/* \/ \/ header & footer */
+
+header {
     background-color: #D7F2FB;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 80% 20%;
     grid-template-rows: 55px 1fr;
-}
-
-.nav-collapse {
-    background-color: #D7F2FB;
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-}
-
-.menu-item a:hover, .menu-item a:focus, #logo-name a:hover, #logo-name a:focus {
-    color:#69c1ed;
 }
 
 #logo-name {
@@ -53,7 +45,9 @@ dl, dt, dd{
     grid-row: 1/2;
     padding-left: 20px;
     display: flex;
+    justify-content: flex-start;
     align-items: center;
+    width: 60%;
 }
 
 #logo-name img {
@@ -61,27 +55,10 @@ dl, dt, dd{
 }
 
 #logo-name a {
-    padding-left: 15px;
+    margin: auto 15px auto;
     padding-top: 5px;
     text-decoration: none;
     font-size: larger;
-}
-
-footer {
-    padding: 1px;
-    background-color: #D7F2FB;
-}
-
-/* \/ \/ responsive nav styling */
-
-html, body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
-a:active, a:hover {
-    outline: 0;
 }
 
 @font-face {
@@ -100,33 +77,34 @@ a:active, a:hover {
     width: 60px;
     height: 55px;
     float: right;
-    grid-column: 3/4;
-    grid-row: 1/2;
     justify-self: end;
 }
-
 
 .nav-toggle:before {
     font-family: "Josefin Sans", sans-serif;
     color: #3E64A5; /* edit this to change the icon color */
-    font: normal 28px/55px "responsivenav"; /* edit font-size (28px) to change the icon size */
+    font: normal 30px/55px "responsivenav"; /* edit font-size (28px) to change the icon size */
+    content: "\2261"; /* hamburger icon */
     text-transform: none;
     text-align: center;
-    position: absolute;
-    content: "\2261"; /* hamburger icon */
     text-indent: 0;
+    position: absolute;
     width: 100%;
     left: 0;
     top: 0;
-    font-weight: bold;
-    font-size: 35px;
-  }
+}
 
 .nav-toggle.active:before {
-    font-weight: normal;
-    content: "\78"; /* X/close icon */
     font-family: "Josefin Sans", sans-serif;
     color: #3E64A5;
+    font-weight: bold;
+    content: "\78"; /* X/close icon */
+}
+
+.nav-collapse {
+    background-color: #D7F2FB;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 
 .nav-collapse ul {
@@ -136,10 +114,21 @@ a:active, a:hover {
     list-style: none;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 .nav-collapse li {
     display: block;
+}
+
+.nav-collapse a {
+    text-decoration: none;
+    padding: 0.7em 1em;
+    color: #3E64A5;
+    width: 100%;
+    display: block;
+    padding-left: 2em;
 }
 
 .js .nav-collapse {
@@ -153,44 +142,22 @@ a:active, a:hover {
     max-height: 9999px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    z-index: 3;
-    width: 100%;
-}
-
-/* .logo {
-    text-decoration: none;
-    font-weight: bold;
-    line-height: 55px;
-    padding: 0 20px;
-    color: black;
-} */
-
 .nav-collapse, .nav-collapse * {
     box-sizing: border-box;
 }
 
-.nav-collapse, .nav-collapse ul {
-    list-style: none;
-    width: 100%;
-    display: flex;
-    justify-content: end;
+.menu-item a:hover, .menu-item a:focus, #logo-name a:hover, #logo-name a:focus {
+    color: #69c1ed;
 }
 
-.nav-collapse a {
-    text-decoration: none;
-    padding: 0.7em 1em;
-    color: #3E64A5;
-    width: 100%;
-    display: block;
+footer {
+    padding: 1px;
+    background-color: #D7F2FB;
 }
 
-.nav-collapse ul ul a {
-    padding-left: 2em;
-}
-.hero {
+/* index main page! */
+
+.main-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,29 +165,35 @@ header {
     padding: 50px 20px;
 }
 
-.text-content h1 {
+.main-page h1 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.text-content p {
+.main-page p {
     font-size: 1rem;
     margin-bottom: 5px;
 }
 
-.text-content .est {
-    font-family: "Courier New", Courier, monospace;
-}
-
-.logo-image img {
+.main-page img {
     width: 400px;
 }
+
+/* about \/ */
+
 .our-mission {
     background-color: #f9f9f9;
     padding: 40px 20px;
     text-align: center;
 }
+
+.our-mission h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #3E64A5;
+}
+
 .our-mission h2::after {
     content: '';
     display: block;
@@ -230,74 +203,16 @@ header {
     margin: 10px auto 20px;
 }
 
-.our-mission .container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.our-mission h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #3E64A5;
-}
-
 .our-mission p {
     font-size: 1em;
-    margin-bottom: 15px;
+    margin: 15px auto 15px;
     color: #555;
     line-height: 1.8;
+    max-width: 500px;
 }
 
 .our-mission p:last-child {
-    margin-bottom: 0;
-}
-
-@media (min-width: 768px) {
-    .our-mission h2 {
-        font-size: 2.5em;
-    }
-
-    .our-mission p {
-        font-size: 1.1em;
-    }
-}
- HEAD
-/* about.html css below */
-h3{
-    font-weight: 300;
-    font-size: 21px;;
-    color: black;
-    text-align: center;
-    line-height: 30px;
-    margin: 0% 10%;
-}
-
-.container{
-    margin: 2em 2em 4rem;
-}
-.exec-list{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    align-items: center;
-    justify-content: center;
-}
-.person{
-    border-radius: 50%;
-    width: 30%;
-    height: auto;
-}
-h5{
-    font-weight: 300;
-    color: grey;
-}
-.member-card{
-    text-align: center;
-    line-height: 0%;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 15px;
-    box-shadow: 1px 1px 20px 5px #ebebeb;
+    margin-bottom: 30px;
 }
 
 .executive-board {
@@ -368,16 +283,45 @@ h5{
     color: #555;
 }
 
+/*event css below*/
+
+#events {
+    background-color: #f9f9f9;
+}
+
+.event-list{
+    text-align: center;
+}
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.event {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 4px solid #69c1ed;
+    background: #f9f9f9;
+}
+
+.event h4 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #3E64A5;
+}
+
+.event p {
+    margin: 5px 0;
+    font-size: 1rem;
+    text-align: left;
+}
+
 /* join.html css below */
 
-main > p{
-    text-align: center;
-}
-h3{
-    color:#3E64A5;
-    font-weight: 400;
-    text-align: center;
-}
 h1::after {
     content: '';
     display: block;
@@ -386,72 +330,73 @@ h1::after {
     background-color: #69c1ed;
     margin: 10px auto 20px;
 }
+
+h1, h2 {
+    margin: 30px 0px 30px 0px;
+    text-align: center;
+}
+
+h3{
+    color:#3E64A5;
+    font-weight: 400;
+    text-align: center;
+}
+
 form {
     max-width: 500px;
     margin: 10px auto;
     padding: 10px 20px;
-    background: #D7F2FB;
+    background: #3E64A5;
     border-radius: 8px;
+    background-color: #d7f2fb;
 }
-  
 
-h1, h2 {
-    margin: 15px 0px 30px 0px;
-    text-align: center;
-}
-  
-  input[type="text"],
-  input[type="email"],
-  textarea,
-  select {
-    background-color: #69c1ed;
+input[type="text"], input[type="email"], textarea, select {
+    background-color: #4B9CD3;
     border: 2px solid transparent;
     font-size: 16px;
     height: auto;
-    margin: 0px;
+    margin: 0;
     outline: 0;
     padding: 15px;
-    width: 93.5%;
+    width: 93%;
     background-color: white;
-    color: white;
+    color: #3E64A5;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
     margin-bottom: 30px;
     transition: all 350ms;
-    border-radius: 5px;
     font-family: "Josefin Sans", sans-serif;
-}
-input::placeholder,
-textarea::placeholder {
-  color: #3E64A5;
+    border-radius: 5px;
 }
 
-input:hover,
-input:focus,
-textarea:hover,
-textarea:focus {
-  border: 2px solid #3E64A5;
+input::placeholder, textarea::placeholder {
+    color: #3E64A5;
 }
-  button, #rush-event-button {
+
+input:hover, input:focus,
+textarea:hover, textarea:focus {
+    border: 2px solid #3E64A5;
+}
+
+button, #rush-event-button {
     padding: 19px 39px 18px 39px;
     color: #fff;
     background-color: #3E64A5;
     font-size: 18px;
     text-align: center;
     font-style: normal;
-    font-family: "Josefin Sans", sans-serif;
     border-radius: 5px;
     border: none;
     width: 100%;
     margin: 10px 0px;
     transition: all 200ms;
-  }
-  
-  button:hover,
-  button:focus, #rush-event-button:hover, #rush-event-button:focus {
-    background-color: #d1f2ff;
+}
+
+button:hover, button:focus, #rush-event-button:hover, #rush-event-button:focus {
+    background-color: #a7ceea;
     border: solid #3E64A5 2px;
     color: #3E64A5;
-  }
+}
 
 #rush-event-button {
     width: 20%;
@@ -466,14 +411,18 @@ textarea:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-#join, #spring-rush, #insta-title, h1 {
-    margin-top: 30px;
+#join, #spring-rush, #insta-title {
+    padding-top: 20px;
 }
 
-@media screen and (min-width: 850px) {
-    #header {
+/* desktop view! */
+
+@media screen and (min-width: 800px) {
+    header {
+        grid-template-columns: 50% 50%;
         grid-template-rows: 1fr;
     }
 
@@ -537,39 +486,15 @@ textarea:focus {
     }
 
     #spring-rush, #insta-title {
-        margin-top: none;
+        margin-top: 0;
     }
-}
 
-/*event css below*/
+    .our-mission h2 {
+        font-size: 2.5em;
+    }
 
-.event-list{
-    text-align: center;
-}
-main {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.event {
-    margin-bottom: 20px;
-    padding: 10px;
-    border-left: 4px solid #69c1ed;
-    background: #f9f9f9;
-}
-
-.event h4 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #3E64A5;
-}
-
-.event p {
-    margin: 5px 0;
-    font-size: 1rem;
-    text-align: left;
+    .our-mission p {
+        font-size: 1.1em;
+        max-width: 800px;
+    }
 }
