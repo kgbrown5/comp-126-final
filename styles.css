@@ -36,7 +36,7 @@ h3, p, a {
 header {
     background-color: #D7F2FB;
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 85% 15%;
     grid-template-rows: 55px 1fr;
 }
 
@@ -82,6 +82,7 @@ header {
 
 .nav-toggle:before {
     font-family: "Josefin Sans", sans-serif;
+    font-weight: bold;
     color: #3E64A5; /* edit this to change the icon color */
     font: normal 55px/55px "responsivenav"; /* edit font-size (28px) to change the icon size */
     content: "\2261"; /* hamburger icon */
@@ -128,6 +129,12 @@ header {
     width: 100%;
     display: block;
     padding-left: 2em;
+    padding-bottom: 15px;
+    font-size: large;
+}
+
+.nav-collapse a:last-child {
+    padding-bottom: 15px;
 }
 
 .js .nav-collapse {
@@ -176,7 +183,8 @@ footer {
 }
 
 .main-page img {
-    width: 400px;
+    max-width: 400px;
+    width: 80%;
 }
 
 /* about \/ */
@@ -414,8 +422,12 @@ button:hover, button:focus, #rush-event-button:hover, #rush-event-button:focus {
     margin-bottom: 20px;
 }
 
-#join, #spring-rush, #insta-title {
+#spring-rush, #insta-title {
     padding-top: 20px;
+}
+
+#join {
+    margin: 20px;
 }
 
 /* desktop view! */
