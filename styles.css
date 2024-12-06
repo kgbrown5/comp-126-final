@@ -36,7 +36,7 @@ h3, p, a {
 header {
     background-color: #D7F2FB;
     display: grid;
-    grid-template-columns: 85% 15%;
+    grid-template-columns: 90% 10%;
     grid-template-rows: 55px 1fr;
 }
 
@@ -103,7 +103,7 @@ header {
 
 .nav-collapse {
     background-color: #D7F2FB;
-    grid-column: 2 / 3;
+    grid-column: 1 / 3;
     grid-row: 2 / 3;
 }
 
