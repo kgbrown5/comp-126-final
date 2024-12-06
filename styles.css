@@ -78,6 +78,8 @@ header {
     height: 55px;
     float: right;
     justify-self: end;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
 }
 
 .nav-toggle:before {
