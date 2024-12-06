@@ -445,7 +445,7 @@ button:hover, button:focus, #rush-event-button:hover, #rush-event-button:focus {
         grid-row: 1 / 2 ;
     }
 
-    .nav-collapse {
+    .nav-collapse.nav-collapse.closed {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
     }
