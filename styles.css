@@ -42,7 +42,7 @@ header {
 
 #logo-name {
     grid-column: 1 / 2;
-    grid-row: 1/2;
+    grid-row: 1 / 2;
     padding-left: 20px;
     display: flex;
     justify-content: flex-start;
@@ -440,7 +440,13 @@ button:hover, button:focus, #rush-event-button:hover, #rush-event-button:focus {
         grid-template-rows: 1fr;
     }
 
+    .logo-name {
+        grid-column: 1 /2;
+        grid-row: 1/2 ;
+    }
+
     .nav-collapse {
+        grid-column: 2/3;
         grid-row: 1 / 2;
     }
     
