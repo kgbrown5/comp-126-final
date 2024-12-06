@@ -403,7 +403,7 @@ button, #rush-event-button {
 }
 
 button:hover, button:focus, #rush-event-button:hover, #rush-event-button:focus {
-    background-color: #a7ceea;
+    background-color: #d7f2fb;
     border: solid #3E64A5 2px;
     color: #3E64A5;
 }
