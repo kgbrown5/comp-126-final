@@ -83,7 +83,6 @@ header {
 .nav-toggle:before {
     font-family: "Josefin Sans", sans-serif;
     color: #3E64A5; /* edit this to change the icon color */
-    font-weight: bold;
     font: normal 55px/55px "responsivenav"; /* edit font-size (28px) to change the icon size */
     content: "\2261"; /* hamburger icon */
     text-transform: none;
@@ -98,7 +97,6 @@ header {
 .nav-toggle.active:before {
     font-family: "Josefin Sans", sans-serif;
     color: #3E64A5;
-    font-weight: bold;
     content: "\78"; /* X/close icon */
 }
 
