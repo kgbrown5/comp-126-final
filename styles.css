@@ -223,7 +223,8 @@ footer {
 
 .executive-board h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin: auto;
+    padding-bottom: 10px;
 }
 
 .executive-board h2::after {
